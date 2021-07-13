@@ -4,6 +4,12 @@ import PackageDescription
 
 let package = Package(
     name: "SpeedrunKit",
+    platforms: [
+        .iOS(.v14),
+        .macOS(.v11),
+        .macCatalyst(.v14),
+        .watchOS(.v7)
+    ],
     products: [
         .library(
             name: "SpeedrunKit",
