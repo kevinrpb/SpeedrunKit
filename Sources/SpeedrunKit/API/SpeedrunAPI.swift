@@ -33,7 +33,9 @@ public struct SpeedrunAPI {
     private let decoder: JSONDecoder = .init()
 
     private init() {
-        decoder.dateDecodingStrategy = .iso8601
+        if #available(iOS 10.0, *) {
+            decoder.dateDecodingStrategy = .iso8601
+        }
     }
 
     @available(iOS 15.0, *)
@@ -71,6 +73,7 @@ public struct SpeedrunAPI {
         }.resume()
     }
 
+    @available(iOS 13.0, *)
     public func call<Result>(_ endpoint: Endpoint) throws -> AnyPublisher<Result, Error> where Result: Decodable {
         let request = buildRequest(for: endpoint)
         
