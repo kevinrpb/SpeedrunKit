@@ -15,10 +15,12 @@ public enum LinkType: String {
     case derivedGames = "derived-games"
     case game
     case guide
-    case leaderboards = "leaderboards"
+    case leaderboards = "leaderboard"
     case levels
+    case next
     case post
     case records
+    case romhacks
     case run
     case runs
     case series

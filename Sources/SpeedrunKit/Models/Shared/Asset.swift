@@ -28,11 +28,11 @@ extension AssetType: Hashable {}
 
 // MARK: Asset
 public struct Asset {
-    public let uri: String
-    public let width: Int
-    public let height: Int
+    public let uri: String?
+    public let width: Int?
+    public let height: Int?
 
-    public var url: URL? { URL(string: uri) }
+    public var url: URL? { URL(string: uri ?? "") }
 }
 
 extension Asset: Decodable {}

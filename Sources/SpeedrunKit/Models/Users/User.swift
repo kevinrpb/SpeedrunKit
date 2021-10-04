@@ -42,7 +42,7 @@ extension UserRole: Decodable {}
 // MARK: User
 public struct User {
     public let id: String
-    public let names: [String: String?]
+    public let names: [String : String?]
     public let weblink: String
 //    public let nameStyle: UsernameStyle // TODO:
     public let role: UserRole

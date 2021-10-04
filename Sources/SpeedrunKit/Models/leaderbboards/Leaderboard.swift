@@ -26,7 +26,7 @@ public struct Leaderboard {
     public let emulators: Bool?
     public let videoOnly: Bool
     public let timing: RunTimeType
-    public let values: [String: String]
+    public let values: [String : String]
     public let runs: [LeaderboardRun]
     public let links: [Link]
 }

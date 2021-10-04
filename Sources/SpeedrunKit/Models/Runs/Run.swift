@@ -79,10 +79,10 @@ public struct Run {
     public let players: [RunPlayer]
     public let date: Date?
     public let submitted: Date?
-    public let times: [String: String]
+    public let times: [String : String]
     public let system: RunSystem
     public let splits: Link
-    public let values: [String: String]
+    public let values: [String : String]
     public let links: [Link]
 }
 
