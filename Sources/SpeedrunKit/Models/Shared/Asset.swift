@@ -33,6 +33,18 @@ public struct Asset {
     public let height: Int?
 
     public var url: URL? { URL(string: uri ?? "") }
+
+    static func getDict(from dict: [String : Asset?]) -> [AssetType : Asset?] {
+        var assets: [AssetType : Asset?] = [:]
+
+        for key in dict.keys {
+            if let type = AssetType(rawValue: key) {
+                assets[type] = dict[key]
+            }
+        }
+
+        return assets
+    }
 }
 
 extension Asset: Decodable {}

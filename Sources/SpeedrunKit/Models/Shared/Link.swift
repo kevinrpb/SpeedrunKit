@@ -14,6 +14,7 @@ public enum LinkType: String {
     case categories
     case derivedGames = "derived-games"
     case game
+    case games
     case guide
     case leaderboards = "leaderboard"
     case levels

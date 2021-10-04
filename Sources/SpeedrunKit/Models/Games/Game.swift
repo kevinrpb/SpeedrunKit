@@ -30,15 +30,7 @@ public struct Game {
     public var assets: [AssetType : Asset?]? {
         guard let _assets = _assets else { return [:] }
 
-        var typedAssets: [AssetType : Asset?] = [:]
-
-        for key in _assets.keys {
-            if let type = AssetType(rawValue: key) {
-                typedAssets[type] = _assets[key]
-            }
-        }
-
-        return typedAssets
+        return Asset.getDict(from: _assets)
     }
     public let links: [Link]?
 }

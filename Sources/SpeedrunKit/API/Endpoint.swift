@@ -48,7 +48,7 @@ public enum Endpoint {
     case getProfile
 
     // MARK: Regions
-    case getRegions
+    case getAllRegions
     case getRegion(regionID: String)
 
     // MARK: Runs
@@ -185,7 +185,7 @@ extension Endpoint {
             return Self.profileURL
 
         // MARK: Regions
-        case .getRegions:
+        case .getAllRegions:
             return Self.regionsURL
         case .getRegion(let regionID):
             return Self.regionsURL
